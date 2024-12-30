@@ -3,6 +3,7 @@ import { LuzmoIQChatComponent } from "@luzmo/react-embed";
 import { ConfigurationForm } from "./components/ConfigurationForm";
 import { AuthorizationInfo } from "./components/AuthorizationInfo";
 import { useConfigState } from "./hooks/useConfigState";
+import { CopyLinkButton } from "./components/CopyLinkButton";
 
 /**
  * Main application component that manages the flow between configuration,
@@ -44,6 +45,7 @@ function App() {
       ) : (
         /* Show the main Luzmo IQ chat interface */
         <div className="chat-container">
+          <CopyLinkButton />
           <LuzmoIQChatComponent
             appServer={config.appServer}
             apiHost={config.apiHost}
