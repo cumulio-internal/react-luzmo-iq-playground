@@ -5,6 +5,7 @@ export interface AuthorizationProps {
   onLoadingChange?: (loading: boolean) => void;
   onError?: (error: string | null) => void;
   onStartChat: () => void;
+  onReset: () => void;
 }
 
 export interface DatasetInfo {

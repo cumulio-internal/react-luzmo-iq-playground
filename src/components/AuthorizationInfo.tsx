@@ -25,6 +25,7 @@ export function AuthorizationInfo({
   onLoadingChange,
   onError,
   onStartChat,
+  onReset,
 }: AuthorizationProps) {
   const [datasets, setDatasets] = useState<DatasetInfo[]>([]);
   const [error, setError] = useState<string>("");
@@ -224,6 +225,9 @@ export function AuthorizationInfo({
           <div className="auth-info-content auth-info-error">
             <strong>Error:</strong> {error}
           </div>
+          <button className="primary-button" onClick={onReset}>
+            Change configuration
+          </button>
         </>
       );
     }

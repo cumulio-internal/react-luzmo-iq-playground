@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Config } from "../types/config";
 
 const defaultAppServer = "https://app.luzmo.com/";
@@ -40,6 +40,25 @@ export function useConfigState() {
     );
   };
 
+  const resetConfig = useCallback(() => {
+    // Clear URL parameters
+    const url = new URL(window.location.href);
+    url.searchParams.delete("authKey");
+    url.searchParams.delete("authToken");
+    url.searchParams.delete("appServer");
+    url.searchParams.delete("apiHost");
+    window.history.replaceState({}, "", url);
+
+    // Reset state
+    setConfig({
+      authKey: "",
+      authToken: "",
+      appServer: defaultAppServer,
+      apiHost: defaultApiHost,
+    });
+    setShowChat(false);
+  }, [defaultAppServer, defaultApiHost]);
+
   return {
     config,
     showChat,
@@ -47,5 +66,6 @@ export function useConfigState() {
     handleConfigSubmit,
     defaultAppServer,
     defaultApiHost,
+    resetConfig,
   };
 }

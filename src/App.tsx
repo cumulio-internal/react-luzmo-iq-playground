@@ -23,6 +23,7 @@ function App() {
     handleConfigSubmit,
     defaultAppServer,
     defaultApiHost,
+    resetConfig,
   } = useConfigState();
 
   return (
@@ -41,6 +42,7 @@ function App() {
           authToken={config.authToken}
           apiHost={config.apiHost}
           onStartChat={() => setShowChat(true)}
+          onReset={resetConfig}
         />
       ) : (
         /* Show the main Luzmo IQ chat interface */
