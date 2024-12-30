@@ -4,7 +4,7 @@ import { ConfigurationFormProps } from "../types/config";
 
 /**
  * Configuration form component specific to this example app.
- * This is not a requirement for Luzmo IQ, but demonstrates how to collect
+ * This is not a requirement for Luzmo IQ, but helps to set up
  * the necessary configuration and authentication details.
  *
  * Collects:

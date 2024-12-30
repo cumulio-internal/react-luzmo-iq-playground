@@ -2,6 +2,10 @@
 
 This example project provides a quick way to test [Luzmo IQ](https://www.luzmo.com/iq) with your own data, while also demonstrating how to integrate it into your application.
 
+Open the project in StackBlitz to get started:
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/~/github.com/cumulio-internal/react-luzmo-iq-playground)
+
 ## What is Luzmo IQ?
 
 **Turn any user into an analyst, with AI.**
@@ -9,35 +13,35 @@ Luzmo IQ provides instant, concise answers to any data question, backed by easy-
 
 [Learn more about Luzmo IQ →](https://www.luzmo.com/iq)
 
-## Project Structure
-
-````
+## Project structure
 
 The example includes additional components to help you:
+
 - Set a custom embed token for Luzmo IQ
 - Verify dataset access and available rows
-- Play with the Luzmo IQchat interface
+- Play with the Luzmo IQ chat interface
 
 ## Prerequisites
 
 Before running this example, you'll need to:
 
-1. **Enable Luzmo IQ for your account**
+1. **Enable Luzmo IQ for your account**\
    Contact your customer success manager or [support@luzmo.com](mailto:support@luzmo.com).
 
-2. **Enable AI Insights for your datasets**
-   Navigate to the dataset details page in Luzmo and enable the "AI insights" feature for each dataset you want to query.
+2. **Enable AI insights for your datasets**\
+   Navigate to the dataset details page in Luzmo and enable the "AI insights" feature for each dataset you want to query with Luzmo IQ.
 
-3. **Create authentication credentials**
+3. **Create authentication credentials**\
    Generate an embed key and token with "use" rights for your datasets through the [authorization API](https://developer.luzmo.com/api/createAuthorization).
 
 ## Quick Start
 
 1. Clone this repository:
+
    ```bash
    git clone ...
    cd luzmo-iq-playground
-````
+   ```
 
 2. Install dependencies:
 
@@ -51,7 +55,7 @@ Before running this example, you'll need to:
    npm run dev
    ```
 
-## Core Integration
+## Integrating Luzmo IQ into your application
 
 The essential part of integrating Luzmo IQ is the `LuzmoIQChatComponent`. Here's a minimal react example:
 
@@ -65,7 +69,7 @@ The essential part of integrating Luzmo IQ is the `LuzmoIQChatComponent`. Here's
 />
 ```
 
-View other examples and languages in the [Luzmo IQ documentation](https://developer.luzmo.com/guide/iq--introduction).
+View other examples in the [Luzmo IQ documentation](https://developer.luzmo.com/guide/iq--introduction).
 
 ## Documentation
 
