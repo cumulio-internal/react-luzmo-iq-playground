@@ -154,7 +154,10 @@ export function AuthorizationInfo({
         });
 
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          const errorData = await response.json();
+          throw new Error(
+            errorData.message || `HTTP error! status: ${response.status}`
+          );
         }
 
         const data: AuthorizationResponse = await response.json();
@@ -219,11 +222,8 @@ export function AuthorizationInfo({
       return (
         <>
           <div className="auth-info-content auth-info-error">
-            Error: {error}
+            <strong>Error:</strong> {error}
           </div>
-          <button className="primary-button" disabled>
-            Start Chat
-          </button>
         </>
       );
     }

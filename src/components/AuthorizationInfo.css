@@ -84,6 +84,26 @@
   border-radius: 8px;
 }
 
+.auth-info-error strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.error-details {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.error-details a {
+  color: #4434ff;
+  text-decoration: none;
+}
+
+.error-details a:hover {
+  text-decoration: underline;
+}
+
 .auth-info-warning {
   background-color: #fff3cd;
   border: 1px solid #ffeeba;
