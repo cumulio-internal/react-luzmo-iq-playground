@@ -1,0 +1,80 @@
+# Luzmo IQ Example
+
+This example project provides a quick way to test [Luzmo IQ](https://www.luzmo.com/iq) with your own data, while also demonstrating how to integrate it into your application.
+
+## What is Luzmo IQ?
+
+**Turn any user into an analyst, with AI.**
+Luzmo IQ provides instant, concise answers to any data question, backed by easy-to-understand charts. Empower your customers with faster, clearer insights by integrating Luzmo IQ as an AI-powered assistant, embedded search – or power your own app with our components and APIs.
+
+[Learn more about Luzmo IQ →](https://www.luzmo.com/iq)
+
+## Project Structure
+
+````
+
+The example includes additional components to help you:
+- Set a custom embed token for Luzmo IQ
+- Verify dataset access and available rows
+- Play with the Luzmo IQchat interface
+
+## Prerequisites
+
+Before running this example, you'll need to:
+
+1. **Enable Luzmo IQ for your account**
+   Contact your customer success manager or [support@luzmo.com](mailto:support@luzmo.com).
+
+2. **Enable AI Insights for your datasets**
+   Navigate to the dataset details page in Luzmo and enable the "AI insights" feature for each dataset you want to query.
+
+3. **Create authentication credentials**
+   Generate an embed key and token with "use" rights for your datasets through the [authorization API](https://developer.luzmo.com/api/createAuthorization).
+
+## Quick Start
+
+1. Clone this repository:
+   ```bash
+   git clone ...
+   cd luzmo-iq-playground
+````
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## Core Integration
+
+The essential part of integrating Luzmo IQ is the `LuzmoIQChatComponent`. Here's a minimal react example:
+
+```
+<LuzmoIQChatComponent
+  appServer="< Luzmo App server, defaults to https://app.luzmo.com >"
+  apiHost="< Luzmo API server, defaults to https://api.luzmo.com >"
+  authKey="< Embed key >"
+  authToken="< Embed token >"
+  options="< Component customization options >"
+/>
+```
+
+View other examples and languages in the [Luzmo IQ documentation](https://developer.luzmo.com/guide/iq--introduction).
+
+## Documentation
+
+- [Luzmo IQ Introduction](https://developer.luzmo.com/guide/iq--introduction)
+- [Luzmo IQ Chat Component API reference](https://developer.luzmo.com/guide/iq--chat-component-api)
+
+## Support
+
+If you have any questions or need assistance:
+
+- Contact [support@luzmo.com](mailto:support@luzmo.com)
+- Visit [luzmo.com](https://www.luzmo.com)
