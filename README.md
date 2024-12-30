@@ -39,8 +39,8 @@ Before running this example, you'll need to:
 1. Clone this repository:
 
    ```bash
-   git clone ...
-   cd luzmo-iq-playground
+   git clone https://github.com/cumulio-internal/react-luzmo-iq-playground.git
+   cd react-luzmo-iq-playground
    ```
 
 2. Install dependencies:
