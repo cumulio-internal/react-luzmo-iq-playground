@@ -64,8 +64,15 @@ export function AuthorizationInfo({
           throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const queryResponses: QueryResponse[] = await response.json();
-        return queryResponses.map((queryResponse) => queryResponse.data[0][0]);
+        const queryResponse: QueryResponse | QueryResponse[] =
+          await response.json();
+
+        // Handle both single response and array of responses
+        if (Array.isArray(queryResponse)) {
+          return queryResponse.map((response) => response.data[0][0]);
+        } else {
+          return queryResponse.data.map((row) => row[0]);
+        }
       } catch (err) {
         console.error("Error fetching row counts:", err);
         return [];
